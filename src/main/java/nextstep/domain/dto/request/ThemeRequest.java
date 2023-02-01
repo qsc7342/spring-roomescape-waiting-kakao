@@ -2,11 +2,13 @@ package nextstep.domain.dto.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import nextstep.domain.persist.Theme;
 
 @Getter
 @AllArgsConstructor
+@Builder
 public class ThemeRequest {
     @Schema(description = "테마 이름")
     private String name;

@@ -2,11 +2,13 @@ package nextstep.domain.dto.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import nextstep.domain.persist.Member;
 
 @Getter
 @AllArgsConstructor
+@Builder
 public class MemberRequest {
     @Schema(description = "유저 아이디")
     private String username;
