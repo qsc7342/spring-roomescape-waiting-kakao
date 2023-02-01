@@ -1,5 +1,6 @@
 package nextstep.domain.dto.request;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +14,11 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ScheduleRequest {
+    @Schema(description = "테마 아이디")
     private Long themeId;
+    @Schema(description = "테마 날짜")
     private String date;
+    @Schema(description = "테마 시간")
     private String time;
 
     public Schedule toEntity(Theme theme) {
